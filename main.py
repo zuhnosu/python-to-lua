@@ -38,6 +38,9 @@ class string:
 
 a = '''
 local nigga = 'test'
+local nigga2 = [[
+    test
+]]
 if nigga == true then 
     nigga = false
     if nigga == false then 
@@ -53,3 +56,8 @@ a = a.replace('then', '):')
 a = a.replace('if', 'if (')
 a = a.replace('end', '')
 a = a.replace('and', '&')
+a = a.replace('[[', '"""')
+a = a.replace(']]', '"""')
+a = a.replace('{', '[')
+a = a.replace('}', ']')
+a = a.replace('--', '#')
